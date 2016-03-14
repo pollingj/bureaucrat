@@ -120,11 +120,11 @@ defmodule Bureaucrat.MarkdownWriter do
       |> puts("```")
     end
 
-    unless record.body_params == %{} do
+    unless record.params == %{} do
       file
       |> puts("* __Request body:__")
       |> puts("```json")
-      |> puts("#{format_body_params(record.body_params)}")
+      |> puts("#{format_body_params(record.params)}")
       |> puts("```")
     end
 
