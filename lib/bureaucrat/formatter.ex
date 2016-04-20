@@ -37,7 +37,7 @@ defmodule Bureaucrat.Formatter do
     Enum.group_by(records, &(path_for(&1, paths, default_path)))
   end
 
-  defp path_for(_record, [], default_path) do
+  defp path_for(record, [], default_path) do
     module = record.private.phoenix_controller
     String.replace(default_path, "README", "#{module}-README")
   end
