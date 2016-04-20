@@ -146,7 +146,7 @@ defmodule Bureaucrat.MarkdownWriter do
       |> puts("```")
     end
 
-    unless record.resp_body == %{} do
+    unless record.resp_body == "" do
       file
       |> puts("* __Response body:__")
       |> puts("```json")
